@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<style type="text/css">
+			.cont li{
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				margin: 0 20px;
+			}
+			.cont ul{
+				display: inline-block;
+				width: 500px;
+				text-align:left;
+				border: 1px dotted #FFACAC;
+			}
+			.cont{
+				text-align: center;
+				width: 600px;
+				margin: 0 auto;
+				border:1px solid #00FFFF
+			}
+			.menu{
+				position: fixed;
+				right: 500px;
+    			top: 100px;
+			}
+			.menu ul{
+				list-style: none;
+			}
+			.menu li{
+				cursor: pointer;
+			}
+			.menu ul a{
+				color: #00FFFF;
+				text-decoration: none;
+			}
+			.menu ul li.act a{
+				color: #FF6666;
+			}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="menu">
+			<ul>
+				<li class="act" data-url="item1"><a>第一个</a></li>
+				<li data-url="item2"><a>第二个</a></li>
+				<li data-url="item3"><a>第三个</a></li>
+				<li data-url="item4"><a>第四个</a></li>
+			</ul>
+		</div>
+		<div class="cont">
+			<ul>
+				<p id="item" data-val="0">第一个</p>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+			</ul>
+			<ul>
+				<p id="item" data-val="1">第二个</p>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+			</ul>
+			<ul>
+				<p id="item" data-val="2">第三个</p>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				
+			</ul>
+			<ul>
+				<p id="item" data-val="3">第四个</p>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+				<li><a href=""><img src="../源代码/CSS进阶/第13章 CSS技巧/images/haizei2.png"/></a></li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+//			$(function(){
+//				var top1=$("#item1").offset().top;
+//				var top2=$("#item2").offset().top;
+//				var top3=$("#item3").offset().top;
+//				var top4=$("#item4").offset().top;
+//				
+//				$(".menu li").click(function(){
+//					scrollH=$("#"+$(this).attr("data-url")).offset().top;
+//					$("html,body").animate({ "scrollTop": scrollH }, 600);
+//				})
+//				
+//				$(window).scroll(function(){//鼠标滚动监听
+//					var h=$(window).scrollTop();//获取滚动条高度
+//					console.log(top4,h)
+//					if(h>top4-100){
+//						$(".menu li").removeClass();
+//						$(".menu li")[3].setAttribute("class","act")
+//					}else if(h>top3-100){
+//						$(".menu li").removeClass();
+//						$(".menu li")[2].setAttribute("class","act")
+//					}else if(h>top2-100){
+//						$(".menu li").removeClass();
+//						$(".menu li")[1].setAttribute("class","act")
+//					}else if(h>top1-100){
+//						$(".menu li").removeClass();
+//						$(".menu li")[0].setAttribute("class","act")
+//					}
+//				})
+//				
+//			})
+			
+			$(function(){
+				//获取页面上的item
+				var items=$(".cont #item");
+				console.log(items)
+				$(".menu li").click(function(){
+					var i=$(this).index();
+					console.log(items[i])
+					scrollH=items[i].offsetTop;
+					$("html,body").animate({ "scrollTop": scrollH }, 600);
+				})
+				$(window).scroll(function(){//鼠标滚动监听
+					var h=$(window).scrollTop();//获取滚动条高度
+					items.each(function(){
+						if(h>$(this).offset().top-100){
+							var i=$(this).attr("data-val");
+							$(".menu li").removeClass();
+							$(".menu li")[i].setAttribute("class","act");
+						}
+					})
+				})
+			})
+		</script>
+	</body>
+</html>

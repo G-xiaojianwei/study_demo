@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				position: absolute;
+				background: blue;
+			}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="div1"></div>
+		<script type="text/javascript">
+			/*
+			 *拖拽
+			 *
+			 *
+			 *
+			 */
+				class Drag{
+					constructor(){
+						this.item=$(".div1");
+						this.draX=0;//x轴偏移量
+						this.draY=0;//y轴偏移量
+						this.w=200;//宽
+						this.h=200;//高
+						this.l=0;//设置div的left
+						this.t=0;//设置div的top
+					}
+					init(){//初始化div
+						this.item.css({
+							width:this.w,
+							height:this.h
+						});
+						this.offsetGet();
+					}
+					offsetGet(){//得到偏移量
+						var _this=this;
+						this.item.mousedown(function(ev){
+							var e=ev || event;
+							_this.draX=e.clientX-_this.item[0].offsetLeft;//得到X轴偏移量
+							_this.draY=e.clientY-_this.item[0].offsetTop;//得到Y轴偏移量
+							_this.itemMove();	
+						})
+					}
+					itemMove(){//移动div
+						var _this=this;
+						$(document).mousemove(function(ev){
+							var e=ev || event;
+							_this.l=e.clientX-_this.draX;//得到left的距离
+							_this.t=e.clientY-_this.draY;//得到top的距离
+
+							//判断左边距
+							if(_this.l<0){
+								_this.l=0;
+							}else if(_this.l>$(document)[0].documentElement.clientWidth-_this.item[0].offsetWidth){
+								_this.l=$(document)[0].documentElement.clientWidth-_this.item[0].offsetWidth
+							}
+							//判断上边距
+							if(_this.t<0){
+								_this.t=0;
+							}else if(_this.t>$(document)[0].documentElement.clientHeight-_this.item[0].offsetHeight){
+								_this.t=$(document)[0].documentElement.clientHeight-_this.item[0].offsetHeight
+							}
+							_this.item.css({
+								left:_this.l,
+								top:_this.t
+							})
+												
+						})
+						this.overMove();
+					}
+					overMove(){//结束移动
+						$(document).mouseup(function(){
+							$(document).unbind();
+						})
+					}
+				}
+				$(function(){
+					var newDrag=new Drag();
+					newDrag.init();
+				})
+		</script>
+	</body>
+</html>
